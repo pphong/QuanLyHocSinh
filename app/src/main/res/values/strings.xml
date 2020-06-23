@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">QuanLyHocSinh</string>
+    <string name="title_main_menu_name">Quản Lý Học Sinh</string>
+    <string name="btn_list">Danh sách học sinh</string>
+    <string name="btn_add">Thêm học sinh</string>
+    <string name="btn_exit">Thoat</string>
+
 </resources>
