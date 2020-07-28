@@ -10,11 +10,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class SplashActivity extends AppCompatActivity {
-    ImageView ivBook;
+    GifImageView ivBook;
     ProgressBar pbProcess;
     Animation ani_movedown;
-    private Intent main;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +32,9 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void setEvent() {
-        ivBook = (ImageView) findViewById(R.id.ivBook);
+        ivBook = (GifImageView) findViewById(R.id.ivBook);
         pbProcess = (ProgressBar) findViewById(R.id.progressBar);
-        main = new Intent(this, MainActivity.class);
+
     }
 
     private void setControl() {
@@ -48,7 +50,7 @@ public class SplashActivity extends AppCompatActivity {
             public void onFinish() {
                 int proc = pbProcess.getProgress();
                 pbProcess.setProgress(proc + (100 - proc));
-                startActivity(main);
+                finish();
             }
         };
         countDownTimer.start();
