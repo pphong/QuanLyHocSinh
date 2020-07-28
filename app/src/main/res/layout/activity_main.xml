@@ -7,10 +7,10 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="220dp"
-        android:layout_height="31dp"
-        android:gravity="center_horizontal"
+        android:id="@+id/tvTitle"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:gravity="center"
         android:text="@string/title_main_menu_name"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -22,31 +22,34 @@
         app:layout_constraintVertical_bias="0.054" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="312dp"
-        android:text="@string/btn_add"
+        android:id="@+id/btnTeachers"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/btn_list_teacher"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintHorizontal_bias="0.778"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
-        android:text="@string/btn_list"
+        android:id="@+id/btnStudents"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="192dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/btn_list_student"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_negative_selector"
         android:text="@string/btn_exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,12 +59,51 @@
         app:layout_constraintVertical_bias="0.932" />
 
     <SearchView
+        android:id="@+id/svStudent"
         android:layout_width="325dp"
         android:layout_height="40dp"
+        android:baselineAligned="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.151" />
+        app:layout_constraintVertical_bias="0.162" />
+
+    <Button
+        android:id="@+id/btnClasses"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="312dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/btn_list_class"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSubjects"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="372dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/btn_list_subject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAnalysis"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="432dp"
+        android:background="@drawable/button_selector"
+        android:focusableInTouchMode="false"
+        android:text="@string/btn_analysis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
