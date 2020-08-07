@@ -19,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         splash = new Intent(this, SplashActivity.class);
         startActivity(splash);
-        setEvent();
         setControl();
+        setEvent();
     }
 
-    private void setEvent() {
+    private void setControl() {
         /**
          * Buttons:
          *  btnStudents
@@ -42,7 +42,39 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setControl() {
+    private void setEvent() {
+        btnViewStudents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,StudentList.class);
+                startActivity(intent);
+            }
+        });
+
+        btnViewTeachers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,TeacherList.class);
+                startActivity(intent);
+            }
+        });
+
+        btnViewClasses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this,ClassList.class);
+//                startActivity(intent);
+            }
+        });
+
+        btnViewAnalysis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Analysis.class);
+                startActivity(intent);
+            }
+        });
+
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
