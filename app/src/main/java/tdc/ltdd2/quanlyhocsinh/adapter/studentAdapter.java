@@ -45,6 +45,7 @@ public class studentAdapter  extends BaseAdapter {
         if (convertView == null) {
             convertView = layoutInflater.inflate(R.layout.student_item, null);
             holder = new ViewHolder();
+            holder.tvId = (TextView) convertView.findViewById(R.id.tvId);
             holder.tvName = (TextView) convertView.findViewById(R.id.tvName);
             holder.tvClass = (TextView) convertView.findViewById(R.id.tvClass);
             holder.tvGender = (TextView) convertView.findViewById(R.id.tvGender);
@@ -55,6 +56,7 @@ public class studentAdapter  extends BaseAdapter {
         }
 
         Student student = this.listData.get(position);
+        holder.tvId.setText(student.getStudentId()+"");
         holder.tvName.setText(student.getStudentName());
         holder.tvClass.setText(student.getStudentClass());
         holder.tvGender.setText(student.getStudentGender());
@@ -73,7 +75,7 @@ public class studentAdapter  extends BaseAdapter {
 
     static class ViewHolder {
         ImageView imgStudent;
-        TextView tvName, tvClass, tvGender, tvBirth;
+        TextView tvId, tvName, tvClass, tvGender, tvBirth;
     }
 
 }

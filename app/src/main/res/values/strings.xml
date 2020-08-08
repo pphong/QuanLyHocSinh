@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QuanLyHocSinh</string>
+    <string name="app_name">Quản Lý Học Sinh</string>
     <string name="title_main_menu_name">Quản Lý Học Sinh</string>
     <string name="btn_list_student">Danh sách học sinh</string>
     <string name="btn_list_teacher">Danh sách giáo viên</string>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="horizontal"
     android:paddingLeft="15px"
     android:paddingTop="5px"
@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="125dp"
-        android:layout_height="128dp"
+        android:layout_width="153dp"
+        android:layout_height="161dp"
         android:visibility="visible"
         app:srcCompat="@drawable/avatar" />
 
@@ -23,6 +23,12 @@
         android:orientation="vertical"
         android:paddingLeft="15dp"
         android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="id" />
 
         <TextView
             android:id="@+id/tvName"

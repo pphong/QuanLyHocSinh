@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".studentAddEdit">
+    tools:context=".StudentAddEdit">
 
     <ImageView
         android:id="@+id/imageView6"
@@ -19,23 +19,40 @@
 
     <LinearLayout
         android:layout_width="379dp"
-        android:layout_height="424dp"
+        android:layout_height="584dp"
         android:background="#A4C7D7F4"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33">
+        app:layout_constraintVertical_bias="0.456">
+
+        <TextView
+            android:id="@+id/tvStudentEditTitle"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="Add new"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStudentEditId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TextView" />
 
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="match_parent"
-            android:layout_height="104dp"
+            android:layout_height="192dp"
             app:srcCompat="@drawable/avatar" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/txStudentName"
             android:layout_width="371dp"
             android:layout_height="57dp"
             android:ems="10"
@@ -43,7 +60,7 @@
             android:text="Name" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/txStudentClass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -51,12 +68,42 @@
             android:text="Class" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/txStudentGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Gender" />
+
+        <EditText
+            android:id="@+id/txStudentBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="BoD" />
+
+        <Button
+            android:id="@+id/btnStudentAddClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_negative_selector"
+            android:text="Clear" />
+
+        <Button
+            android:id="@+id/btnStudentAddSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/btnStudentAddScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_selector"
+            android:text="subject scores" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
