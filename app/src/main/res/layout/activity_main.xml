@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8500C4FF"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnStudents"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="192dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/btn_list_student"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnTeachers"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/btn_list_teacher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnClasses"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="312dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/btn_list_class"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSubjects"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="372dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/btn_list_subject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAnalysis"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="432dp"
+        android:background="@drawable/button_selector"
+        android:focusableInTouchMode="false"
+        android:text="@string/btn_analysis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_negative_selector"
+        android:text="@string/btn_exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.932" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="460dp"
+        android:layout_height="493dp"
+        android:layout_marginTop="128dp"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_school" />
+
+    <SearchView
+        android:id="@+id/svStudent"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:background="@drawable/search_selector"
+        android:baselineAligned="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:gravity="center"
+        android:text="@string/title_main_menu_name"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
