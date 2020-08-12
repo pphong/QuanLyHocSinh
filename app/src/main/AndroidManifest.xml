@@ -12,7 +12,6 @@
         <activity android:name=".StudentAddEdit"></activity>
         <activity android:name=".Analysis" />
         <activity android:name=".SubjectList" />
-        <activity android:name=".ClassList" />
         <activity android:name=".TeacherList" />
         <activity android:name=".StudentList" />
         <activity android:name=".SplashActivity" />
