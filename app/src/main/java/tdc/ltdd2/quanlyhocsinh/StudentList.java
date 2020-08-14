@@ -65,6 +65,7 @@ public class StudentList extends AppCompatActivity {
             Object objStudent = listView.getItemAtPosition(i);
                 Student student = (Student) objStudent;
                 Intent intent = new Intent(StudentList.this, StudentAddEdit.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 Bundle bundle = new Bundle();
                 bundle.putBoolean("edit",true);
                 bundle.putString("studentId",student.getStudentId()+"");

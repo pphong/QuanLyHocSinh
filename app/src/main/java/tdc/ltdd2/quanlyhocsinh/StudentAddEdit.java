@@ -118,19 +118,22 @@ public class StudentAddEdit extends AppCompatActivity {
 
     private void addStudent(Student student) {
         studentDatabaseHandler.addStudent(student);
-        Intent intent = new Intent(StudentAddEdit.this, StudentList.class);
-        startActivity(intent);
+        this.reorderToFront();
     }
 
     private void deleteStudent(int id) {
         studentDatabaseHandler.deleteStudent(id);
-        Intent intent = new Intent(StudentAddEdit.this, StudentList.class);
-        startActivity(intent);
+        this.reorderToFront();
     }
 
     private void updateStudent(Student student) {
         studentDatabaseHandler.updateStudent(student);
-        Intent intent = new Intent(StudentAddEdit.this, StudentList.class);
+        this.reorderToFront();
+    }
+
+    private void reorderToFront(){
+        Intent intent = getIntent().setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        intent.setClass(StudentAddEdit.this, StudentList.class);
         startActivity(intent);
     }
 }

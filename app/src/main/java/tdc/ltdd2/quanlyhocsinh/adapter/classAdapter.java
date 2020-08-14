@@ -53,6 +53,7 @@ public class classAdapter  extends BaseAdapter {
         }
 
         Class Class = this.listData.get(position);
+        holder.tvClassItemId.setText(Class.getClassId()+"");
         holder.tvClassItemName.setText(Class.getClassName());
         return convertView;
     }

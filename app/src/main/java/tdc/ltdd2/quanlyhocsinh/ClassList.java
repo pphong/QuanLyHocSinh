@@ -36,17 +36,13 @@ public class ClassList extends AppCompatActivity {
     }
 
     private void setEvent() {
-        Class c1 = new Class(0,"1A");
-        Class c2 = new Class(0,"1B");
-        Class c3 = new Class(0,"2A");
-        this.addClass(c1);
-        this.addClass(c2);
-        this.addClass(c3);
+//        Class c1 = new Class(0,"1A");
+//        this.addClass(c1);
         setCustomListView();
         btnAddClass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ClassList.this,StudentAddEdit.class);
+                Intent intent = new Intent(ClassList.this,ClassAddEdit.class);
                 startActivity(intent);
             }
         });
@@ -60,13 +56,15 @@ public class ClassList extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Object objStudent = listView.getItemAtPosition(i);
-                Student student = (Student) objStudent;
-                Intent intent = new Intent(ClassList.this, StudentAddEdit.class);
+                Object objClass = listView.getItemAtPosition(i);
+                Class classO = (Class) objClass;
+                Intent intent = getIntent();
+                intent.setClass(ClassList.this, ClassAddEdit.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 Bundle bundle = new Bundle();
                 bundle.putBoolean("edit",true);
-                bundle.putString("classId",student.getStudentId()+"");
-                bundle.putString("className",student.getStudentName());
+                bundle.putString("classId",classO.getClassId()+"");
+                bundle.putString("className",classO.getClassName());
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
