@@ -132,6 +132,7 @@ public class TeacherAddEdit extends AppCompatActivity {
     private void reorderToFront(){
         Intent intent = getIntent().setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         intent.setClass(TeacherAddEdit.this, TeacherList.class);
+//        Intent intent = new Intent(this,TeacherList.class);
         startActivity(intent);
     }
 }

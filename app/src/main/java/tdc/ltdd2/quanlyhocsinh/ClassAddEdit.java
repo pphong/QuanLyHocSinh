@@ -120,6 +120,8 @@ public class ClassAddEdit extends AppCompatActivity {
     private void reorderToFront(){
         Intent intent = getIntent().setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         intent.setClass(ClassAddEdit.this, ClassList.class);
+//        Intent intent = new Intent(this,ClassList
+//                .class);
         startActivity(intent);
     }
 }

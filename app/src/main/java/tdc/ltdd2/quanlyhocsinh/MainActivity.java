@@ -73,6 +73,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnViewSubjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,SubjectList.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
+            }
+        });
+
         btnViewAnalysis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

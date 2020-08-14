@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -32,6 +34,33 @@ public class TeacherList extends AppCompatActivity {
 
         setControl();
         setEvent();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.action_bar, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.home:{
+                Intent intent = new Intent(TeacherList.this,MainActivity.class);
+                startActivity(intent);
+                return true;}
+            case R.id.add:{
+                Intent intent = new Intent(TeacherList.this,ClassAddEdit.class);
+                startActivity(intent);
+                return true;}
+            case R.id.refresh:{
+                finish();
+                startActivity(getIntent());
+                return true;}
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private void setEvent() {

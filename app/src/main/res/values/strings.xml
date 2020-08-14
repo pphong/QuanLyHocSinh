@@ -9,6 +9,7 @@
     <string name="btn_add">Thêm học sinh</string>
     <string name="btn_add_class">Thêm lớp học</string>
     <string name="btn_add_teacher">Thêm giáo viên</string>
+    <string name="btn_add_subject">Thêm môn học</string>
     <string name="btn_exit">Thoát</string>
 
 </resources>
