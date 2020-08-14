@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import tdc.ltdd2.quanlyhocsinh.database.DatabaseHandler;
+
 public class MainActivity extends AppCompatActivity {
 
     private Intent splash;
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setEvent() {
+        DatabaseHandler dbHandler = new DatabaseHandler(this);
         btnViewStudents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

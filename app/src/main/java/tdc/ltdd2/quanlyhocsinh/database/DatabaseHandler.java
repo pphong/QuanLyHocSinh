@@ -9,6 +9,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
     private static final int DATABASE_VERSION = 1;
     private static final String TABLE_STUDENT = "students";
     private static final String TABLE_CLASS = "classes";
+    private static final String TABLE_TEACHER = "teachers";
 
     public String sqlTableStudent(){
         String TABLE_NAME = "students";
@@ -31,8 +32,11 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         String TABLE_NAME = "teachers";
         String KEY_ID = "id";
         String KEY_NAME = "name";
-        return String.format("CREATE TABLE %s(%s INTEGER PRIMARY KEY AUTOINCREMENT, %s TEXT)",
-                TABLE_NAME, KEY_ID, KEY_NAME);
+        String KEY_CLASS_ID = "class";
+        String KEY_GENDER = "gender";
+        String KEY_BIRTH = "birth";
+        return String.format("CREATE TABLE %s(%s INTEGER PRIMARY KEY AUTOINCREMENT, %s TEXT, %s TEXT, %s TEXT, %s TEXT)",
+                TABLE_NAME, KEY_ID, KEY_NAME, KEY_CLASS_ID, KEY_GENDER,KEY_BIRTH);
     }
     public String sqlTableSubjects(){
         String TABLE_NAME = "subjects";
@@ -55,12 +59,15 @@ public class DatabaseHandler extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(this.sqlTableStudent());
         sqLiteDatabase.execSQL(this.sqlTableClass());
+        sqLiteDatabase.execSQL(this.sqlTableTeachers());
+        sqLiteDatabase.execSQL(this.sqlTableSubjects());
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL(this.sqlDropTableIfExist(TABLE_STUDENT));
         sqLiteDatabase.execSQL(this.sqlDropTableIfExist(TABLE_CLASS));
+        sqLiteDatabase.execSQL(this.sqlDropTableIfExist(TABLE_TEACHER));
         onCreate(sqLiteDatabase);
     }
 }

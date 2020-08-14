@@ -10,7 +10,7 @@
     android:paddingBottom="5px">
 
     <ImageView
-        android:id="@+id/ivStudentAvatar"
+        android:id="@+id/ivTeacherAvatar"
         android:layout_width="153dp"
         android:layout_height="161dp"
         android:visibility="visible"
@@ -24,32 +24,32 @@
         android:paddingTop="10dp">
 
         <TextView
-            android:id="@+id/tvId"
+            android:id="@+id/tvTeacherId"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="id" />
 
         <TextView
-            android:id="@+id/tvName"
+            android:id="@+id/tvTeacherName"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="name"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvClass"
+            android:id="@+id/tvTeacherClass"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="class" />
 
         <TextView
-            android:id="@+id/tvGender"
+            android:id="@+id/tvTeacherGender"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="gender" />
 
         <TextView
-            android:id="@+id/tvBirth"
+            android:id="@+id/tvTeacherBirth"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="birth" />
