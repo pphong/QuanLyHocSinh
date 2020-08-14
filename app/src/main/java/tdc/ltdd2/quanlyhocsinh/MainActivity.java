@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        splash = new Intent(this, SplashActivity.class);
-        startActivity(splash);
+//        splash = new Intent(this, SplashActivity.class);
+//        startActivity(splash);
         setControl();
         setEvent();
     }
@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         btnViewClasses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this,ClassList.class);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this,ClassList.class);
+                startActivity(intent);
             }
         });
 

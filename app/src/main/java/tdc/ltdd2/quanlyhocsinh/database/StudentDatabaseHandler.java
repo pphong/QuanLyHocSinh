@@ -12,9 +12,7 @@ import java.util.List;
 
 import tdc.ltdd2.quanlyhocsinh.model.Student;
 
-public class StudentDatabaseHandler extends SQLiteOpenHelper{
-    private static final String DATABASE_NAME = "schoolManager";
-    private static final int DATABASE_VERSION = 1;
+public class StudentDatabaseHandler extends DatabaseHandler{
     private static final String TABLE_NAME = "students";
 
     private static final String KEY_ID = "id";
@@ -24,22 +22,7 @@ public class StudentDatabaseHandler extends SQLiteOpenHelper{
     private static final String KEY_BIRTH = "birth";
 
     public StudentDatabaseHandler(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
-    }
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        String create_students_table = String.format("CREATE TABLE %s(%s INTEGER PRIMARY KEY AUTOINCREMENT, %s TEXT, %s TEXT, %s TEXT, %s TEXT)",
-                TABLE_NAME, KEY_ID, KEY_NAME, KEY_CLASS_ID, KEY_GENDER,KEY_BIRTH);
-        db.execSQL(create_students_table);
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String drop_students_table = String.format("DROP TABLE IF EXISTS %s", TABLE_NAME);
-        db.execSQL(drop_students_table);
-
-        onCreate(db);
+        super(context);
     }
 
     public void addStudent(Student student) {

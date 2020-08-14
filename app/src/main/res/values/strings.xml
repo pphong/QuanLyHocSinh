@@ -7,6 +7,7 @@
     <string name="btn_list_subject">Danh sách môn học</string>
     <string name="btn_analysis">Phân tích thống kê</string>
     <string name="btn_add">Thêm học sinh</string>
+    <string name="btn_add_class">Thêm lớp học</string>
     <string name="btn_exit">Thoát</string>
 
 </resources>
