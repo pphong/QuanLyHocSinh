@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom|center"
+    android:background="@drawable/backgound"
+    android:orientation="vertical"
+    app:layout_anchorGravity="bottom|center|center_horizontal"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".Layout.about_us">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/option"
+        android:gravity="center"
+        android:text="@string/thongtin"
+        android:textAllCaps="false"
+        android:textColor="@color/whitecolor"
+        android:textColorLink="#3F51B5"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/dev"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        style="@style/titleAbout"
+        android:text="@string/name_project" />
+
+    <TextView
+        style="@style/titleAbout"
+        android:text="@string/name_nhom" />
+
+    <TextView
+        style="@style/titleAbout"
+        android:text="@string/name_us" />
+
+    <TextView
+        style="@style/titleAbout"
+        android:text="@string/name_user2" />
+
+    <TextView
+        style="@style/titleAbout"
+        android:text="@string/name_ver" />
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgound"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".Layout.add_student">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/option"
+        android:gravity="center"
+        android:text="@string/themhs"
+        android:textAllCaps="false"
+        android:textColor="@color/whitecolor"
+        android:textColorLink="#3F51B5"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edt_name_std"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn"
+        android:drawablePadding="20dp"
+        android:elevation="5dp"
+        android:hint="@string/user_std"
+        android:paddingLeft="15dp" />
+
+    <EditText
+        android:id="@+id/edt_code_std"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn"
+        android:drawablePadding="20dp"
+        android:elevation="5dp"
+        android:hint="@string/code_std"
+        android:paddingLeft="15dp" />
+
+    <RadioGroup
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn"
+        android:drawablePadding="20dp"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="80dp"
+            android:text="Giới Tính: "
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rad_nam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nam"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rad_nu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Nữ"
+            android:textSize="18sp" />
+    </RadioGroup>
+    <EditText
+        android:id="@+id/edt_ngaysinh"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn"
+        android:drawablePadding="20dp"
+        android:elevation="5dp"
+        android:hint="@string/ngaysinh"
+        android:paddingLeft="15dp" />
+</LinearLayout>

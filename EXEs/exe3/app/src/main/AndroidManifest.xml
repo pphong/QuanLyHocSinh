@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.projectnhom15">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_15_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_15_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Layout.add_class"></activity>
+        <activity android:name=".Layout.add_student" />
+        <activity android:name=".Layout.animationOpen" />
+        <activity android:name=".Layout.Login" />
+        <activity android:name=".Layout.detail_lop" />
+        <activity android:name=".Layout.detail_hs" />
+        <activity android:name=".Layout.qly_hs" />
+        <activity android:name=".Layout.qly_lop" />
+        <activity android:name=".Layout.about_us" />
+        <activity android:name=".Layout.MainActivity" />
+        <activity android:name=".Layout.splap1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

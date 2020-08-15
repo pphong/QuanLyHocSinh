@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgound"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".Layout.Login">
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/iconadmin" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/draw"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn"
+            android:drawableStart="@drawable/ic_baseline_account_circle_24"
+            android:drawablePadding="20dp"
+            android:elevation="5dp"
+            android:hint="@string/user_name"
+            android:paddingLeft="15dp" />
+
+        <EditText
+            android:id="@+id/det_pass"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+            android:drawablePadding="20dp"
+            android:elevation="5dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/joinbtn"
+            android:text="@string/sign_in"
+            android:textAllCaps="false"
+            android:textColor="@color/whitecolor" />
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/joinbtn"
+            android:text="@string/exit"
+            android:textAllCaps="false"
+            android:textColor="@color/whitecolor" />
+        <TextView
+            style="@style/txtOption"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:text="@string/ver" />
+    </LinearLayout>
+
+</LinearLayout>

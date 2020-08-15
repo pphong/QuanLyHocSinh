@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgound"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".Layout.animationOpen">
+
+    <ImageView
+        android:id="@+id/img_welcome"
+        android:layout_width="352dp"
+        android:layout_height="183dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/wellcom" />
+
+    <ImageView
+        android:id="@+id/img_stdmn"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:src="@drawable/stumana" />
+
+    <ImageView
+        android:id="@+id/img_team15"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:src="@drawable/team15" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/cycle"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|left"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/cyclist" />
+</LinearLayout>
