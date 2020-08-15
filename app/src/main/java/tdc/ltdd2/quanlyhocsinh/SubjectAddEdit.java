@@ -118,9 +118,9 @@ public class SubjectAddEdit extends AppCompatActivity {
     }
 
     private void reorderToFront(){
-        Intent intent = getIntent().setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        intent.setClass(this, SubjectList.class);
-//        Intent intent = new Intent(this,SubjectList.class);
+//        Intent intent = getIntent().setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+//        intent.setClass(this, SubjectList.class);
+        Intent intent = new Intent(this,SubjectList.class);
         startActivity(intent);
     }
 }

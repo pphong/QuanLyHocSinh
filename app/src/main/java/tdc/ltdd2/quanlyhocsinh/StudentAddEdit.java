@@ -5,21 +5,33 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import tdc.ltdd2.quanlyhocsinh.adapter.customSpinner;
+import tdc.ltdd2.quanlyhocsinh.database.ClassDatabaseHandler;
 import tdc.ltdd2.quanlyhocsinh.database.StudentDatabaseHandler;
+import tdc.ltdd2.quanlyhocsinh.model.Class;
+import tdc.ltdd2.quanlyhocsinh.model.SpinnerItem;
 import tdc.ltdd2.quanlyhocsinh.model.Student;
 
 public class StudentAddEdit extends AppCompatActivity {
 
     StudentDatabaseHandler studentDatabaseHandler;
+    ClassDatabaseHandler classDatabaseHandler;
     TextView tvStudentEditTitle, tvStudentEditId;
     EditText txStudentName,txStudentClass,txStudentGender,txStudentBirth;
     Button btnClear, btnSave, btnScore;
     Boolean actionEdit;
     Intent intent;
+    Spinner customSpinner;
+    List<Class> classes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +85,31 @@ public class StudentAddEdit extends AppCompatActivity {
                 }
             }
         });
+
+        ArrayList<SpinnerItem> customList = new ArrayList<>();
+        classes = getListClassData();
+        for (Class classO : classes) {
+            customList.add(new SpinnerItem(classO.getClassName(), R.drawable.ic_baseline_home_work_24));
+        }
+
+        customSpinner customAdapter = new customSpinner(this, customList);
+
+        if (customSpinner != null) {
+            customSpinner.setAdapter(customAdapter);
+            customSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    Object objClass = customSpinner.getItemAtPosition(i);
+                    SpinnerItem spinnerO = (SpinnerItem) objClass;
+                    txStudentClass.setText(spinnerO.getClassName());
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            });
+        }
     }
 
     private void switchElement() {
@@ -106,6 +143,8 @@ public class StudentAddEdit extends AppCompatActivity {
         btnSave = findViewById(R.id.btnStudentAddSave);
         btnClear = findViewById(R.id.btnStudentAddClear);
         btnScore = findViewById(R.id.btnStudentAddScore);
+        customSpinner = findViewById(R.id.spClass);
+
     }
 
     private void setValues(){
@@ -114,6 +153,13 @@ public class StudentAddEdit extends AppCompatActivity {
         txStudentClass.setText(this.intent.getStringExtra("studentClass"));
         txStudentGender.setText(this.intent.getStringExtra("studentGender"));
         txStudentBirth.setText(this.intent.getStringExtra("studentBirth"));
+    }
+
+    private List<Class> getListClassData() {
+        classDatabaseHandler = new ClassDatabaseHandler(this);
+        List<Class> list = new ArrayList<Class>();
+        list.addAll(classDatabaseHandler.getAllClasses());
+        return list;
     }
 
     private void addStudent(Student student) {
@@ -132,9 +178,9 @@ public class StudentAddEdit extends AppCompatActivity {
     }
 
     private void reorderToFront(){
-        Intent intent = getIntent().setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        intent.setClass(StudentAddEdit.this, StudentList.class);
-//        Intent intent = new Intent(this,StudentList.class);
+//        Intent intent = getIntent().setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+//        intent.setClass(StudentAddEdit.this, StudentList.class);
+        Intent intent = new Intent(this,StudentList.class);
         startActivity(intent);
     }
 }

@@ -26,6 +26,8 @@ public class StudentList extends AppCompatActivity {
     ListView listView;
     List<Student> students;
     studentAdapter adapter;
+    String key = "";
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,8 +79,15 @@ public class StudentList extends AppCompatActivity {
     }
 
     private void setControl() {
+        intent = getIntent();
         studentDatabaseHandler = new StudentDatabaseHandler(this);
-        students = getListData();
+        String sKey = this.intent.getStringExtra("key");
+        if (sKey != "" && sKey != null){
+            this.key = this.intent.getStringExtra("key");
+            students = getListDataSearch(this.key);
+        } else {
+            students = getListData();
+        }
         listView  = (ListView) findViewById(R.id.lsStudent);
         btnAddStudent = (Button) findViewById(R.id.btnAddStudent);
     }
@@ -111,6 +120,12 @@ public class StudentList extends AppCompatActivity {
     private  List<Student> getListData() {
         List<Student> list = new ArrayList<Student>();
         list.addAll(studentDatabaseHandler.getAllStudents());
+        return list;
+    }
+
+    private  List<Student> getListDataSearch(String key) {
+        List<Student> list = new ArrayList<Student>();
+        list.addAll(studentDatabaseHandler.getAllStudentsBySearch(key));
         return list;
     }
 }

@@ -6,6 +6,7 @@
     <string name="btn_list_class">Danh sách lớp</string>
     <string name="btn_list_subject">Danh sách môn học</string>
     <string name="btn_analysis">Phân tích thống kê</string>
+    <string name="title_analysis">Phân tích thống kê ĐTB các Lớp</string>
     <string name="btn_add">Thêm học sinh</string>
     <string name="btn_add_class">Thêm lớp học</string>
     <string name="btn_add_teacher">Thêm giáo viên</string>

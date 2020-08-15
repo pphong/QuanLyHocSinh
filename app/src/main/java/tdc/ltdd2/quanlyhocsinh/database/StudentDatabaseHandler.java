@@ -54,6 +54,22 @@ public class StudentDatabaseHandler extends DatabaseHandler{
         return studentList;
     }
 
+    public List<Student> getAllStudentsBySearch(String key) {
+        List<Student>  studentList = new ArrayList<>();
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE "+ KEY_NAME +" LIKE '%" + key + "%'";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        cursor.moveToFirst();
+
+        while(cursor.isAfterLast() == false) {
+            Student student = new Student(cursor.getInt(0), cursor.getString(1),
+                    cursor.getString(2), cursor.getString(3), cursor.getString(4));
+            studentList.add(student);
+            cursor.moveToNext();
+        }
+        return studentList;
+    }
+
     public Student getStudentById(int id) {
         Student  student = new Student();
         String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + KEY_ID + " = " + id;

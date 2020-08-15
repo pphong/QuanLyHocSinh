@@ -67,6 +67,11 @@
             android:inputType="textPersonName"
             android:text="Class" />
 
+        <Spinner
+            android:id="@+id/spClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <EditText
             android:id="@+id/txStudentGender"
             android:layout_width="match_parent"
